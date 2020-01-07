@@ -23,4 +23,6 @@ post2 = Post.create(title: "Sample Post", content: "This is sample's first post"
 
 post3 = Post.create(title: "Example 2 Post", content: "This is example's second post", photo_url: "", user_id: example.id)
 
+# follow = Follow.create(follower_id: sample.id, followee_id: example.id)
+
 puts 'seeded'

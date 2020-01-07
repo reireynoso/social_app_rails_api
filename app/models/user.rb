@@ -6,6 +6,7 @@ class User < ApplicationRecord
     validates_presence_of :password_digest
 
     has_many :posts, :dependent => :delete_all
+    
     has_many :followed_users, foreign_key: :follower_id, class_name: "Follow"
     has_many :followees, through: :followed_users
 
