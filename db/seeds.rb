@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Follow.destroy_all
+Post.destroy_all
+User.destroy_all
+
+Follow.reset_pk_sequence 
+Post.reset_pk_sequence
+User.reset_pk_sequence
+
+sample = User.create(username: "sample", password: "hello", photo_url_string: "")
+example = User.create(username: "example", password: "hello", photo_url_string: "")
+
+post1 = Post.create(title: "Example Post", content: "This is example's first post", photo_url: "", user_id: example.id)
+
+post2 = Post.create(title: "Sample Post", content: "This is sample's first post", photo_url: "", user_id: sample.id)
+
+post3 = Post.create(title: "Example 2 Post", content: "This is example's second post", photo_url: "", user_id: example.id)
+
+puts 'seeded'
