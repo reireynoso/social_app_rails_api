@@ -4,7 +4,7 @@ class Api::V1::SessionsController < ApplicationController
         if user && user.authenticate(params[:password])
             payload = {user_id: user.id}
             token = encode_token(payload)
-            render json: {user: user, token: token}
+            render json: {user: UserSerializer.new(user), token: token}
         else
             render json: {errors: ["Invalid Credentials"]}, status: :not_acceptable
         end

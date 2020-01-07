@@ -16,6 +16,7 @@ User.reset_pk_sequence
 
 sample = User.create(username: "sample", password: "hello", photo_url_string: "")
 example = User.create(username: "example", password: "hello", photo_url_string: "")
+example1 = User.create(username: "example1", password: "hello", photo_url_string: "")
 
 post1 = Post.create(title: "Example Post", content: "This is example's first post", photo_url: "", user_id: example.id)
 
