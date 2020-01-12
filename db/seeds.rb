@@ -26,4 +26,5 @@ post3 = Post.create(title: "Example 2 Post", content: "This is example's second 
 
 # follow = Follow.create(follower_id: sample.id, followee_id: example.id)
 
+# byebug 
 puts 'seeded'
