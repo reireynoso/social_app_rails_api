@@ -7,7 +7,8 @@ class Api::V1::FollowsController < ApplicationController
         else
             follow = Follow.create(follow_params)
         end
-        render json: {user: UserSerializer.new(follow.followee)}
+        # byebug
+        render json: {user: UserSerializer.new(follow.person_doing_the_following)}
     end
 
     private
