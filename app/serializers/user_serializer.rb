@@ -1,6 +1,6 @@
 class UserSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :username, :followees, :followers
+  attributes :username, :followees, :followers, :sent_messages, :received_messages
 
   # attribute :followers do |follower|
   #   {
