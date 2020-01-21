@@ -7,10 +7,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Follow.destroy_all
+Message.destroy_all
 Post.destroy_all
 User.destroy_all
 
-Follow.reset_pk_sequence 
+Follow.reset_pk_sequence
+Message.reset_pk_sequence 
 Post.reset_pk_sequence
 User.reset_pk_sequence
 
