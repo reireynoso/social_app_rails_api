@@ -7,6 +7,6 @@ class Api::V1::MessagesController < ApplicationController
     private 
 
     def message_params
-        params.permit(:)
+        params.permit(:sender_id, :receiver_id, :content)
     end
 end
