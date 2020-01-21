@@ -1,7 +1,10 @@
 class Api::V1::MessagesController < ApplicationController
 
     def create
-
+        # byebug
+        message = Message.create(message_params)
+        # byebug
+        render json: {user: UserSerializer.new(message.person_sending_the_message)}
     end
 
     private 
