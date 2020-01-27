@@ -4,6 +4,7 @@ class Api::V1::MessagesController < ApplicationController
         # byebug
         message = Message.create(message_params)
         # byebug
+        ActionCable.server.broadcast('feed_channel', message)
         render json: {user: UserSerializer.new(message.person_sending_the_message)}
     end
 
