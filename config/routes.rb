@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post "/follow_action", to: "follows#follow_action"
       post "/login", to: "sessions#login"
       get "/auto_login", to: "sessions#auto_login"
+      mount ActionCable.server => '/cable'
     end
   end
 end
